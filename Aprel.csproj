@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF3C40CA-8B5A-40FD-9867-85D0A99C5EE8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aprel</RootNamespace>
+    <AssemblyName>Aprel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartIndexViewModel.cs" />
+    <Compile Include="Models\CoffeeContext.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\EFBookRepository.cs" />
+    <Compile Include="Models\IBookRepository.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\lightslider.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\01_piccolo_krups_anthracite.jpg" />
+    <Content Include="Images\1_circolo_krups_red.jpg" />
+    <Content Include="Images\1_melody3_krups_black.jpg" />
+    <Content Include="Images\1_oblo_krups_pianoblack.jpg" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\Accessories\Accessor1\Accessor1.jpg" />
+    <Content Include="Images\Accessories\Accessor1\Accessor11.jpg" />
+    <Content Include="Images\Accessories\Accessor1\Accessor12.jpg" />
+    <Content Include="Images\Accessories\Accessor1\Accessor1Small.jpg" />
+    <Content Include="Images\Accessories\Accessor2\Accessor21.jpg" />
+    <Content Include="Images\Accessories\Accessor2\Accessor22.jpg" />
+    <Content Include="Images\Accessories\Accessor2\Accessor23.jpg" />
+    <Content Include="Images\Accessories\Accessor2\Accessor2Small.jpg" />
+    <Content Include="Images\Accessories\Accessor3\Accessor31.jpg" />
+    <Content Include="Images\Accessories\Accessor3\Accessor32.jpg" />
+    <Content Include="Images\Accessories\Accessor3\Accessor33.jpg" />
+    <Content Include="Images\Accessories\Accessor3\Accessor3Small.jpg" />
+    <Content Include="Images\Accessories\Accessor4\Accessor41.jpg" />
+    <Content Include="Images\Accessories\Accessor4\Accessor42.jpg" />
+    <Content Include="Images\Accessories\Accessor4\Accessor43.jpg" />
+    <Content Include="Images\Accessories\Accessor4\Accessor4Small.jpg" />
+    <Content Include="Images\Accessories\Accessor5\Accessor51.jpg" />
+    <Content Include="Images\Accessories\Accessor5\Accessor52.jpg" />
+    <Content Include="Images\Accessories\Accessor5\Accessor53.jpg" />
+    <Content Include="Images\Accessories\Accessor5\Accessor5Small.jpg" />
+    <Content Include="Images\Accessories\Accessor6\Accessor61.jpg" />
+    <Content Include="Images\Accessories\Accessor6\Accessor62.jpg" />
+    <Content Include="Images\Accessories\Accessor6\Accessor63.jpg" />
+    <Content Include="Images\Accessories\Accessor6\Accessor6Small.jpg" />
+    <Content Include="Images\Accessories\Accessor7\Accessor71.jpg" />
+    <Content Include="Images\Accessories\Accessor7\Accessor72.jpg" />
+    <Content Include="Images\Accessories\Accessor7\Accessor7Small.jpg" />
+    <Content Include="Images\Accessories\Accessor8\Accessor81.jpg" />
+    <Content Include="Images\Accessories\Accessor8\Accessor82.jpg" />
+    <Content Include="Images\Accessories\Accessor8\Accessor83.jpg" />
+    <Content Include="Images\Accessories\Accessor8\Accessor8Small.jpg" />
+    <Content Include="Images\Accessories\Accessor9\Accessor91.jpg" />
+    <Content Include="Images\Accessories\Accessor9\Accessor92.jpg" />
+    <Content Include="Images\Accessories\Accessor9\Accessor93.jpg" />
+    <Content Include="Images\Accessories\Accessor9\Accessor9Small.jpg" />
+    <Content Include="Images\Akcii\Action1.jpg" />
+    <Content Include="Images\Akcii\Action11.png" />
+    <Content Include="Images\Akcii\Action12.png" />
+    <Content Include="Images\Akcii\Action2.jpg" />
+    <Content Include="Images\Akcii\Action3.jpg" />
+    <Content Include="Images\Akcii\Action4.jpg" />
+    <Content Include="Images\Akcii\ActionSmall.png" />
+    <Content Include="Images\btn_cart.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\CIRCOLO_FS.jpg" />
+    <Content Include="Images\concept_05_01_introduction_2_.png" />
+    <Content Include="Images\controls.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\GENIO_2.jpg" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\Machines\Machines01\Machine11.jpg" />
+    <Content Include="Images\Machines\Machines01\Machine12.jpg" />
+    <Content Include="Images\Machines\Machines01\Machine13.jpg" />
+    <Content Include="Images\Machines\Machines01\Machine1Small.jpg" />
+    <Content Include="Images\Machines\Machines02\Machine21.jpg" />
+    <Content Include="Images\Machines\Machines02\Machine22.jpg" />
+    <Content Include="Images\Machines\Machines02\Machine23.jpg" />
+    <Content Include="Images\Machines\Machines02\Machine2Small.jpg" />
+    <Content Include="Images\Machines\Machines03\Machine31.jpg" />
+    <Content Include="Images\Machines\Machines03\Machine32.jpg" />
+    <Content Include="Images\Machines\Machines03\Machine33.jpg" />
+    <Content Include="Images\Machines\Machines03\Machine3Small.jpg" />
+    <Content Include="Images\Machines\Machines04\Machine41.jpg" />
+    <Content Include="Images\Machines\Machines04\Machine42.jpg" />
+    <Content Include="Images\Machines\Machines04\Machine43.jpg" />
+    <Content Include="Images\Machines\Machines04\Machine4Small.jpg" />
+    <Content Include="Images\Machines\Machines05\Machine51.jpg" />
+    <Content Include="Images\Machines\Machines05\Machine52.jpg" />
+    <Content Include="Images\Machines\Machines05\Machine53.jpg" />
+    <Content Include="Images\Machines\Machines05\Machine5Small.jpg" />
+    <Content Include="Images\Machines\Machines06\Machine61.jpg" />
+    <Content Include="Images\Machines\Machines06\Machine62.jpg" />
+    <Content Include="Images\Machines\Machines06\Machine63.jpg" />
+    <Content Include="Images\Machines\Machines06\Machine6Small.jpg" />
+    <Content Include="Images\Machines\Machines07\Machine71.jpg" />
+    <Content Include="Images\Machines\Machines07\Machine72.jpg" />
+    <Content Include="Images\Machines\Machines07\Machine73.jpg" />
+    <Content Include="Images\Machines\Machines07\Machine7Small.jpg" />
+    <Content Include="Images\Machines\Machines08\Machine81.jpg" />
+    <Content Include="Images\Machines\Machines08\Machine82.jpg" />
+    <Content Include="Images\Machines\Machines08\Machine83.jpg" />
+    <Content Include="Images\Machines\Machines08\Machine8Small.jpg" />
+    <Content Include="Images\Machines\Machines09\Machine91.jpg" />
+    <Content Include="Images\Machines\Machines09\Machine92.jpg" />
+    <Content Include="Images\Machines\Machines09\Machine93.jpg" />
+    <Content Include="Images\Machines\Machines09\Machine9Small.jpg" />
+    <Content Include="Images\Machines\Machines10\Machine101.jpg" />
+    <Content Include="Images\Machines\Machines10\Machine102.jpg" />
+    <Content Include="Images\Machines\Machines10\Machine103.jpg" />
+    <Content Include="Images\Machines\Machines10\Machine10Small.jpg" />
+    <Content Include="Images\Machines\Machines11\Machine111.jpg" />
+    <Content Include="Images\Machines\Machines11\Machine112.jpg" />
+    <Content Include="Images\Machines\Machines11\Machine113.jpg" />
+    <Content Include="Images\Machines\Machines11\Machine11Small.jpg" />
+    <Content Include="Images\Machines\Machines12\Machine121.jpg" />
+    <Content Include="Images\Machines\Machines12\Machine122.jpg" />
+    <Content Include="Images\Machines\Machines12\Machine123.jpg" />
+    <Content Include="Images\Machines\Machines12\Machine12Small.jpg" />
+    <Content Include="Images\Machines\Machines13\Machine131.jpg" />
+    <Content Include="Images\Machines\Machines13\Machine132.jpg" />
+    <Content Include="Images\Machines\Machines13\Machine133.jpg" />
+    <Content Include="Images\Machines\Machines13\Machine13Small.jpg" />
+    <Content Include="Images\Machines\Machines14\Machine141.jpg" />
+    <Content Include="Images\Machines\Machines14\Machine142.jpg" />
+    <Content Include="Images\Machines\Machines14\Machine143.jpg" />
+    <Content Include="Images\Machines\Machines14\Machine14Small.jpg" />
+    <Content Include="Images\Machines\Machines15\Machine151.jpg" />
+    <Content Include="Images\Machines\Machines15\Machine152.jpg" />
+    <Content Include="Images\Machines\Machines15\Machine153.jpg" />
+    <Content Include="Images\Machines\Machines15\Machine15Small.jpg" />
+    <Content Include="Images\Machines\Machines16\Machine161.jpg" />
+    <Content Include="Images\Machines\Machines16\Machine16Small.jpg" />
+    <Content Include="Images\Machines\Machines17\Machine171.jpg" />
+    <Content Include="Images\Machines\Machines17\Machine17Small.jpg" />
+    <Content Include="Images\MELODY_2.jpg" />
+    <Content Include="Images\MELODY_3.jpg" />
+    <Content Include="Images\MELODY_3_FS.jpg" />
+    <Content Include="Images\MINI-ME.jpg" />
+    <Content Include="Images\Napitki\Napitok01\Napitok11.jpg" />
+    <Content Include="Images\Napitki\Napitok01\Napitok12.jpg" />
+    <Content Include="Images\Napitki\Napitok01\Napitok13.jpg" />
+    <Content Include="Images\Napitki\Napitok01\Napitok1Small.jpg" />
+    <Content Include="Images\Napitki\Napitok02\Napitok21.jpg" />
+    <Content Include="Images\Napitki\Napitok02\Napitok22.jpg" />
+    <Content Include="Images\Napitki\Napitok02\Napitok23.jpg" />
+    <Content Include="Images\Napitki\Napitok02\Napitok2Small.jpg" />
+    <Content Include="Images\Napitki\Napitok03\Napitok31.jpg" />
+    <Content Include="Images\Napitki\Napitok03\Napitok32.jpg" />
+    <Content Include="Images\Napitki\Napitok03\Napitok33.jpg" />
+    <Content Include="Images\Napitki\Napitok03\Napitok3Small.jpg" />
+    <Content Include="Images\Napitki\Napitok04\Napitok41.jpg" />
+    <Content Include="Images\Napitki\Napitok04\Napitok42.jpg" />
+    <Content Include="Images\Napitki\Napitok04\Napitok43.jpg" />
+    <Content Include="Images\Napitki\Napitok04\Napitok4Small.jpg" />
+    <Content Include="Images\Napitki\Napitok05\Napitok51.jpg" />
+    <Content Include="Images\Napitki\Napitok05\Napitok52.jpg" />
+    <Content Include="Images\Napitki\Napitok05\Napitok53.jpg" />
+    <Content Include="Images\Napitki\Napitok05\Napitok5Small.jpg" />
+    <Content Include="Images\Napitki\Napitok06\Napitok61.jpg" />
+    <Content Include="Images\Napitki\Napitok06\Napitok62.jpg" />
+    <Content Include="Images\Napitki\Napitok06\Napitok63.jpg" />
+    <Content Include="Images\Napitki\Napitok06\Napitok6Small.jpg" />
+    <Content Include="Images\Napitki\Napitok07\Napitok71.jpg" />
+    <Content Include="Images\Napitki\Napitok07\Napitok72.jpg" />
+    <Content Include="Images\Napitki\Napitok07\Napitok73.jpg" />
+    <Content Include="Images\Napitki\Napitok07\Napitok7Small.jpg" />
+    <Content Include="Images\Napitki\Napitok08\Napitok81.jpg" />
+    <Content Include="Images\Napitki\Napitok08\Napitok82.jpg" />
+    <Content Include="Images\Napitki\Napitok08\Napitok83.jpg" />
+    <Content Include="Images\Napitki\Napitok08\Napitok8Small.jpg" />
+    <Content Include="Images\Napitki\Napitok09\Napitok91.jpg" />
+    <Content Include="Images\Napitki\Napitok09\Napitok92.jpg" />
+    <Content Include="Images\Napitki\Napitok09\Napitok93.jpg" />
+    <Content Include="Images\Napitki\Napitok09\Napitok9Small.jpg" />
+    <Content Include="Images\Napitki\Napitok10\Napitok101.jpg" />
+    <Content Include="Images\Napitki\Napitok10\Napitok102.jpg" />
+    <Content Include="Images\Napitki\Napitok10\Napitok103.jpg" />
+    <Content Include="Images\Napitki\Napitok10\Napitok10Small.jpg" />
+    <Content Include="Images\Napitki\Napitok11\Napitok111.jpg" />
+    <Content Include="Images\Napitki\Napitok11\Napitok112.jpg" />
+    <Content Include="Images\Napitki\Napitok11\Napitok113.jpg" />
+    <Content Include="Images\Napitki\Napitok11\Napitok11Small.jpg" />
+    <Content Include="Images\Napitki\Napitok12\Napitok121.jpg" />
+    <Content Include="Images\Napitki\Napitok12\Napitok122.jpg" />
+    <Content Include="Images\Napitki\Napitok12\Napitok123.jpg" />
+    <Content Include="Images\Napitki\Napitok12\Napitok12Small.jpg" />
+    <Content Include="Images\Napitki\Napitok13\Napitok131.jpg" />
+    <Content Include="Images\Napitki\Napitok13\Napitok132.jpg" />
+    <Content Include="Images\Napitki\Napitok13\Napitok133.jpg" />
+    <Content Include="Images\Napitki\Napitok13\Napitok13Small.jpg" />
+    <Content Include="Images\Napitki\Napitok14\Napitok141.jpg" />
+    <Content Include="Images\Napitki\Napitok14\Napitok142.jpg" />
+    <Content Include="Images\Napitki\Napitok14\Napitok143.jpg" />
+    <Content Include="Images\Napitki\Napitok14\Napitok14Small.jpg" />
+    <Content Include="Images\Napitki\Napitok15\Napitok151.jpg" />
+    <Content Include="Images\Napitki\Napitok15\Napitok152.jpg" />
+    <Content Include="Images\Napitki\Napitok15\Napitok153.jpg" />
+    <Content Include="Images\Napitki\Napitok15\Napitok15Small.jpg" />
+    <Content Include="Images\OKnestlelogo.png" />
+    <Content Include="Images\Slider\1.jpg" />
+    <Content Include="Images\Slider\2.jpg" />
+    <Content Include="Images\Slider\3.jpg" />
+    <Content Include="Images\Slider\4.jpg" />
+    <Content Include="Images\ассортимент.png" />
+    <Content Include="Images\Доставка по Москве.png" />
+    <Content Include="Images\доставка.png" />
+    <Content Include="Images\связаться с нами.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lightslider.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\price\jquery-ui.js" />
+    <Content Include="Scripts\price\jquery-ui.min.js" />
+    <Content Include="Scripts\price\jquery.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Napitki.cshtml" />
+    <Content Include="Views\Home\NapitokDetails.cshtml" />
+    <Content Include="Views\Home\Coffeemachines.cshtml" />
+    <Content Include="Views\Home\CoffeemachineDetails.cshtml" />
+    <Content Include="Views\Home\Accessories.cshtml" />
+    <Content Include="Views\Home\AccessorDetails.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
+    <Content Include="Views\Home\Dostavka.cshtml" />
+    <Content Include="Views\Home\Akcii.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Home\_Coffeemachines.cshtml" />
+    <Content Include="Views\Home\_Napitki.cshtml" />
+    <Content Include="Views\Home\_Accessories.cshtml" />
+    <Content Include="Views\Home\Politic.cshtml" />
+    <Content Include="Views\Home\Coocies.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Home\Conditions.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\price\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60791</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60791/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
