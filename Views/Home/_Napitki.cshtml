@@ -1,0 +1,13 @@
+﻿@model List<Aprel.Models.Item>
+ 
+<div>
+        <section class="Napitki">
+            <ul id="Napitki_unit">
+                @foreach (var i in Model)
+                {
+                    <li><a href="@Url.Action("NapitokDetails", "Home", new { id = i.Id })"> <div><img src="@i.Image" /><div class="Visota">@i.Name</div><div class="price">@i.Price РУБ</div></div>  </a></li>
+                }
+            </ul>
+        </section>        
+</div>
+

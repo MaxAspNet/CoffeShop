@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    <link rel="icon" href="~/Images/favicon.ico" type="image/x-icon">
+
+
+    <script>
+
+        function myfunction(parametr) {
+            alert(parametr)
+        }
+        //myfunction();
+        // пример аякса здесь задаем обращение к методу сервера
+        function executeEajax() {
+            $.ajax({
+                url: "/Home/AjaxExample", success: function (result) {
+                    alert(result);
+                }
+            });
+        }
+
+
+        function getAjaxHtml3() {
+            var prices = $("#slider_price").slider("values");
+            var obj = { "price1": prices[0], "price2": prices[1], "typeItem1": checkitem1(), "typeItem2": checkitem2(), "typeItem3": checkitem3() };
+
+            $.ajax({
+                type: "POST",
+                url: "/GetAjaxHtml3/Home",
+                data: JSON.stringify(obj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                success: function (result) {
+                    $("#Items").html(result);   //находим #Items. рисуем в формате html разметку result.
+                }
+            });
+        }
+
+        function getAjaxHtml4() {
+            var prices = $("#slider_price").slider("values");
+            var obj = { "price1": prices[0], "price2": prices[1], "typeItem1": checkitem1(), "typeItem2": checkitem2(), "typeItem3": checkitem3() };
+
+            $.ajax({
+                type: "POST",
+                 url: "/GetAjaxHtml4/Home",
+                data: JSON.stringify(obj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                success: function (result) {
+                    $("#Items").html(result);   //находим #Items. рисуем в формате html разметку result.
+                }
+            });
+        }
+
+        function getAjaxHtml5() {
+            var prices = $("#slider_price").slider("values");
+            var obj = { "price1": prices[0], "price2": prices[1], "typeItem1": checkitem1(), "typeItem2": checkitem2(), "typeItem3": checkitem3() };
+
+            $.ajax({
+                type: "POST",
+                url: "/GetAjaxHtml5/Home",
+                data: JSON.stringify(obj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                success: function (result) {
+                    $("#Items").html(result);   //находим #Items. рисуем в формате html разметку result.
+                }
+            });
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="fixedHeader">
+                <div class="float-left">
+                    <p class="site-title">
+                        <a href="@Url.Action("Index", "Home")"><img src="~/Images/Logo.png" /></a>
+                    </p>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>
+                                @Html.ActionLink("О системе", "Index", "Home", null, new { @class = "nav_menu_item" })
+                                                        <div class="menu__drop" >
+                                                            <ul id="ul_drop">
+                                                                <li class="menu__list">@Html.ActionLink("СОЗДАЙТЕ ИЗЫСКАННЫЕ КОФЕЙНЫЕ НАПИТКИ С ПОМОЩЬЮ КАПСУЛ КОФЕ И КОФЕМАШИН", "Napitki", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("ДЕМОНСТРАЦИЯ СИСТЕМЫ", "Coffeemachines", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("КАЧЕСТВО КОФЕМАШИН", "Coffeemachines", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("СЕКРЕТ В КАПСУЛАХ", "Napitki", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("КАЧЕСТВО КОФЕ", "Napitki", "Home")</li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                            <li>
+                                @Html.ActionLink("Напитки", "Napitki", "Home", null, new { @class = "nav_menu_item" })
+
+                                <div class="menu__drop">
+                                    <ul id="ul_drop">
+                                        <li class="menu__list">@Html.ActionLink("ЭКСПРЕССО", "Napitki", "Home")</li>
+                                        <li class="menu__list">@Html.ActionLink("КАПУЧЧИНО И ЛАТТЕ", "Napitki", "Home")</li>
+                                        <li class="menu__list">@Html.ActionLink("ГОРЯЧИЙ ШОКОЛАД", "Napitki", "Home")</li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Кофемашины", "Coffeemachines", "Home", null, new { @class = "nav_menu_item" })
+
+                                 <div class="menu__drop" >
+                                         <ul id="ul_drop">
+                                            <li class="menu__list">@Html.ActionLink("OBLO", "Coffeemachines", "Home")</li>
+                                            <li class="menu__list">@Html.ActionLink("LUMIO", "Coffeemachines", "Home")</li>
+                                            <li class="menu__list">@Html.ActionLink("PICOLO / GENIO", "Coffeemachines", "Home")</li>
+                                         </ul>
+                                 </div>
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Аксессуары", "Accessories", "Home", null, new { @class = "nav_menu_item" })
+                                                        <div class="menu__drop" >
+                                                            <ul id="ul_drop">
+                                                                <li class="menu__list">@Html.ActionLink("ЧАШКИ И СТАКАНЫ", "Accessories", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("ЛОЖКИ ", "Accessories", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("ДЕРЖАТЕЛИ И ПОДСТАВКИ", "Accessories", "Home")</li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                    </li>
+                            <li>
+                                @Html.ActionLink("Помощь", "Help", "Home", null, new { @class = "nav_menu_item" })
+                                                        <div class="menu__drop" >
+                                                            <ul id="ul_drop">
+                                                                <li class="menu__list">@Html.ActionLink("ИНСТРУКЦИИ ДЛЯ КОФЕМАШИН С РУКОВОДСТВОМ ПО ЭКСПЛУАТАЦИИ. КАК ПОЛЬЗОВАТЬСЯ КОФЕМАШИНОЙ", "Help", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("УХОД ЗА КОФЕМАШИНОЙ", "Help", "Home")</li>
+                                               
+                                                            </ul>
+                                                        </div>
+
+                            </li>
+                            <li>@Html.ActionLink("Доставка", "Dostavka", "Home")</li>
+                            <li>
+                                @Html.ActionLink("Акции", "Akcii", "Home", null, new { @class = "nav_menu_item" })
+                                                        <div class="menu__drop" >
+                                                            <ul id="ul_drop">
+                                                                <li class="menu__list">@Html.ActionLink("КАК ВОСПОЛЬЗОВАТЬСЯ ПРОМОКОДОМ", "Akcii", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("ВЫИГРАЙ ГОДОВОЙ ЗАПАС КОФЕ", "Akcii", "Home")</li>
+                                                                <li class="menu__list">@Html.ActionLink("АКЦИИ, СКИДКИ И ВЫГОДНЫЕ ПРЕДЛОЖЕНИЯ", "Akcii", "Home")</li>
+                                                            </ul>
+                                                        </div>
+                            </li>
+                            <li style="float: right;margin-top: -11px;"><a style="padding:0;" href='@Url.Action("Index", "Cart")'><img src="~/Images/btn_cart.png" /></a></li>
+
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="allPage">
+        <div id="body">
+            @RenderSection("featured", required: false)
+            @*<section class="container body-content">*@
+            <section class="content-wrapper">
+                @RenderBody()
+            </section>
+        </div>
+        @RenderSection("addition", required: false)
+
+        <div>
+            <ul id="menu1">
+                <li><a href="@Url.Action("Dostavka", "Home")">   <div>  <img src="~/Images/доставка.png" /> <span>БЕСПЛАТНАЯ<br>ДОСТАВКА<br> ОТ 3500 РУБ.</span></div>    </a></li>
+                <li><a href="@Url.Action("Napitki", "Home")">   <div>  <img src="~/Images/ассортимент.png" /><span>ШИРОКИЙ<br>АССОРТИМЕНТ<br> КОФЕ</span></div>    </a></li>
+                <li><a href="@Url.Action("Dostavka", "Home")">   <div>  <img src="~/Images/Доставка%20по%20Москве.png" /> <span>ДОСТАВКА<br>ПО ВСЕЙ<br> РОССИИ</span></div>    </a></li>
+                <li><a href="@Url.Action("Index", "Home")">   <div>  <img src="~/Images/связаться%20с%20нами.png" /><span>   <br>СВЯЗАТЬСЯ <br>С НАМИ</span></div></a></li>
+            </ul>
+            <hr>
+
+
+            <div class="softFooter">
+                <ul>
+                    <li><a href="@Url.Action("FAQ", "Home")">Часто задаваемые вопросы</a></li>
+                    <li><a href="@Url.Action("Politic", "Home")">Политика конфиденциальности</a></li>
+                    <li><a href="@Url.Action("Coocies", "Home")">Политика cookie</a></li>
+                    <li><a href="@Url.Action("Conditions", "Home")">Общие условия ООО «Нестле Россия»</a></li>
+                    
+                    <li style="width:109px;">
+                        <img style="margin-bottom: -14px;;" src="/Images/OKnestlelogo.png" />
+                    </li>
+                    
+                </ul>
+            </div>
+
+
+
+
+            <footer>
+                <div class="footer-actual">
+                    <div class="footer-block">
+                        <ul>
+                            <li class="footer_title">
+                                <a href="@Url.Action("Napitki", "Home")" title="ВКУСЫ">
+                                    ВКУСЫ
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Napitki", "Home")" title="Эспрессо">
+                                    Эспрессо
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Napitki", "Home")" title="Черный кофе">
+                                    Черный кофе
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Napitki", "Home")" title="Капучино и Латте">
+                                    Капучино и Латте
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Napitki", "Home")" title="Горячий шоколад">
+                                    Горячий шоколад
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Napitki", "Home")" title="Новая коллекция Absolute Origin">
+                                    Новая коллекция Absolute Origin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-block">
+                        <ul>
+                            <li class="footer_title">
+                                <a href="@Url.Action("Coffeemachines", "Home")" title="КОФЕМАШИНЫ">
+                                    КОФЕМАШИНЫ
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Coffeemachines", "Home")" title="Oblo">
+                                    Oblo
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Coffeemachines", "Home")" title="Mini Me">
+                                    Mini Me
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Coffeemachines", "Home")" title="Lumio">
+                                    Lumio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Coffeemachines", "Home")" title="Piccolo / Genio">
+                                    Piccolo / Genio
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-block">
+                        <ul>
+                            <li class="footer_title">
+
+                                <a href="@Url.Action("Accessories", "Home")" title="АКСЕССУАРЫ">
+                                    АКСЕССУАРЫ
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Accessories", "Home")" title="Чашки и стаканы">
+                                    Чашки и стаканы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Accessories", "Home")" title="Держатели и подставки">
+                                    Держатели и подставки
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Accessories", "Home")" title="Ложки">
+                                    Ложки
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-block">
+                        <ul>
+                            <li class="footer_title"><a href="/introduction">О СИСТЕМЕ</a></li>
+                            <li><a href="/coffee-quality">Качество кофе</a></li>
+                            <li><a href="/smart-capsule">Секрет в капсулах</a></li>
+                            <li><a href="/system-demo">Обзор системы</a></li>
+                            <li><a href="/about-nescafe-dolce-gusto/machine-expertise/">Преимущества кофемашин</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+
+                        <ul>
+                            <li class="footer_title"><a href="@Url.Action("Help", "Home")">ПОМОЩ</a></li>
+                            <li><a href="@Url.Action("Help", "Home")">Руководство пользователя</a></li>
+                            <li><a href="@Url.Action("Help", "Home")">Уход за кофемашиной</a></li>
+                            <li><a href="@Url.Action("Help", "Home")">Гарантийные условия</a></li>
+                            <li><a href="@Url.Action("FAQ", "Home")">FAQ</a></li>
+                            <li><a href="@Url.Action("Help", "Home")">Связаться с нами</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+
+            </footer>
+        </div>
+        @*@Scripts.Render("~/bundles/jquery")*@
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
+
+
+

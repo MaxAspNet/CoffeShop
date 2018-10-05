@@ -1,0 +1,159 @@
+﻿@model List<Aprel.Models.Item>
+
+@{
+    ViewBag.Title = "Профессиональные кофемашины NESCAFÉ® DOLCE GUSTO® KRUPS";
+}
+
+<body onload="getAjaxHtml4();">
+    <div class="breadcrumbs"><a href="@Url.Action("Index", "Home")">Home</a>        >      КОФЕМАШИНЫ</div>
+        <div style="padding-top: 24px;">
+            <div class="chooser"> 
+                <dl>
+                    <dt class="filter-name">Цена</dt>
+                    <dd class="option">
+                        <div id='options'>
+                            <form method='post'>
+                                От:
+                                <input type="text" name="price" id="price" maxlength="10">
+                                До:
+                                <input type="text" name="price" id="price2" maxlength="10">
+                                руб.
+                            </form>
+                        </div>
+                        <div id="slider_price"></div>
+                    </dd>
+
+                    <dt class="filter-name">Цвет</dt>
+                    <dd class="option">
+                        <ol>
+                            <li><input id="itemFilter1" type="checkbox" onclick="getAjaxHtml4()" /><label for="itemFilter1">  Белая </label></li>
+                            <li><input id="itemFilter2" type="checkbox" onclick="getAjaxHtml4()" /><label for="itemFilter2">  Красная</label></li>
+                            <li><input id="itemFilter3" type="checkbox" onclick="getAjaxHtml4()" /><label for="itemFilter3">  Черная</label></li>
+                        </ol>
+                    </dd>
+
+                </dl>
+
+            </div>
+            <div>
+                <section class="CoffeemachinesOutside">
+                    <div id="block" class="banner custom">
+
+                        <ul id="lightslider">
+                            <li><img src="~/Images/Akcii/Action1.jpg" /></li>
+                            <li><img src="~/Images/Akcii/Action2.jpg" /> </li>
+                            <li><img src="~/Images/Akcii/Action3.jpg" /> </li>
+                            <li><img src="~/Images/Akcii/Action4.jpg" /></li>
+                        </ul>
+                    </div>
+                    <script>
+                        $(window).load(function () {
+
+                            $('#lightslider').lightSlider({
+                                item: 1,
+                                loop: true,
+                                autoWidth: true,
+                                auto: true,
+                                pause: 3000,
+
+                            });
+                        });
+
+                        function checkitem1() {
+                            if (itemFilter1.checked || (!itemFilter1.checked && !itemFilter2.checked && !itemFilter3.checked)) {
+                                return 'White'
+                            } else {
+                                return 'Undefined'
+                            }
+                        }
+                        function checkitem2() {
+                            if (itemFilter2.checked || (!itemFilter2.checked && !itemFilter1.checked && !itemFilter3.checked)) {
+                                return 'Red'
+                            } else {
+                                return 'Undefined'
+                            }
+                        }
+                        function checkitem3() {
+                            if (itemFilter3.checked || (!itemFilter3.checked && !itemFilter2.checked && !itemFilter1.checked)) {
+                                return 'Black'
+                            } else {
+                                return 'Undefined'
+                            }
+                        }
+                    </script>
+                    <script>
+                        $(function () {
+                            $('#price').change(function () {
+                                var val = $(this).val();
+                                $('#slider_price').slider("values", 0, val);
+                                $(function (event, ui) { getAjaxHtml4() });
+
+                            });
+                            $('#price2').change(function () {
+                                var val1 = $(this).val();
+                                $('#slider_price').slider("values", 1, val1);
+                                $(function (event, ui) { getAjaxHtml4() });
+                            });
+
+
+                            $("#slider_price").slider({
+                                range: true,
+                                min: 3989,
+                                max: 13999,
+                                values: [3989, 13999],
+                                slide: function (event, ui) {
+                                    //Поле минимального значения
+                                    $("#price").val(ui.values[0]);
+                                    //Поле максимального значения
+                                    $("#price2").val(ui.values[1]);
+
+                                },
+                                stop: function (event, ui) { getAjaxHtml4() }
+                            });
+                            //Записываем значения ползунков в момент загрузки страницы
+                            //То есть значения по умолчанию
+                            $("#price").val($("#slider_price").slider("values", 0));
+                            $("#price2").val($("#slider_price").slider("values", 1));
+                        });
+                    </script>
+                </section>
+                <section class="Napitki">
+                    <header>
+                        <p></p>
+                        <h2>@ViewBag.Title</h2>
+                    </header>
+                    <div id="Items">
+                    </div>
+                </section>
+                <section class="Coffeemachines">
+
+                    <div class="float-right">
+                        <p class="float-right">
+
+                            <h1>Кофейные шедевры каждый день</h1>
+                            <br>
+                            NESCAFÉ® Dolce Gusto® предлагает выбрать и приобрести кофемашину, которая станет настоящим украшением дома. Богатый черный эспрессо или нежный латте макиато с кремовой пенкой? Ледяной молочный капучино айс или густой горячий шоколад? С профессиональными аппаратами производства KRUPS® и капсулами NESCAFE® Dolce Gusto® ваш кофе словно сделан руками профессионального бариста в лучшей кофейне города.
+                            <br>
+                            <h1>Капсульные кофемашины KRUPS® — современное решение для истинных кофейных гурманов</h1>
+                            <br>
+                            Кофе-машины NESCAFÉ® Dolce Gusto® способны удовлетворить любой, даже самый взыскательный вкус. Широкий ассортимент моделей позволяет подобрать кофемашину, которая подойдет именно вам как по цене, так по размеру, энергопотреблению и внешнему виду.
+                            KRUPS® — это бренд, давно зарекомендовавший себя гарантом надежности, современности и высокого стиля. Каждая кофемашина NESCAFÉ® Dolce Gusto®, произведенная компанией KRUPS®, сочетает в себе новейшие технологии, легкость эксплуатации и неповторимый дизайн.
+                            В линейке кофемашин KRUPS® есть как автоматические, так и механические модели. Их главное отличие — в системе управления, которая позволяет приготовить ароматный напиток почти без вашего участия или, напротив, позволит вам примерить образ профессионального бариста. Однако, какими бы ни были ваши предпочтения, капсульный принцип работы всех кофе-машин NESCAFÉ® Dolce Gusto® позволяет всякий раз готовить изумительно вкусные кофейные напитки.
+                            Секрет всех капсульных машин — в использовании специальных капсул, содержащих прессованный кофе превосходного качества. Достаточно просто поместить капсулу в кофемашину — и система сама выберет необходимое давление для приготовления сбалансированного напитка. И, конечно, капсульным кофе-машинам NESCAFÉ® Dolce Gusto® под силу даже самые сложные рецепты, которые не всегда получается воплотить в обычной кофе-машине. Восхитительные многослойные латте, капучино с нежнейшей пенкой или эксклюзивный эспрессо Barista — все возможно, благодаря богатому ассортименту кофейных капсул NESCAFÉ® Dolce Gusto®.
+
+                            <br>
+                            <h1>Выгодные предложения при покупке кофемашин NESCAFÉ® Dolce Gusto®</h1>
+                            <br>
+
+                            Выбирая кофе-машину в официальном магазине NESCAFÉ® Dolce Gusto®, вы получаете не только возможность неограниченного выбора, но и существенную экономию. Каждый месяц мы готовы предложить вам одну модель кофемашины с эксклюзивной скидкой. Кроме того, только в магазине NESCAFÉ® Dolce Gusto® можно приобрести лимитированные серии кофемашин, дизайн которых был разработан в коллаборации с ведущими современными художниками
+                            И, конечно, вместе с каждой кофемашиной, приобретенной в нашем магазине, вас ждет приятный бонус — пробный набор капсул NESCAFÉ® Dolce Gusto® и скидка на следующую покупку. Не откладывайте удовольствие в долгий ящик — начинайте наслаждаться идеальным кофе прямо сейчас!
+
+
+                        </p>
+                    </div>
+                    <br><br><br><br><br>
+                </section>
+
+            </div>
+        </div>
+</body>

@@ -1,0 +1,168 @@
+﻿@model List<Aprel.Models.Item>
+
+@{
+    ViewBag.Title = "Кофе в капсулах для кофемашины NESCAFE® Dolce Gusto®";
+}
+
+<body onload="getAjaxHtml5();">
+    <div class="breadcrumbs"><a href="@Url.Action("Index", "Home")">Home</a>        >      ВКУСЫ</div>
+    <div style="padding-top: 24px;">
+        <div class="chooser">
+            <dl>
+
+                <dt class="filter-name">Цена</dt>
+                <dd class="option">
+                    <div id='options'>
+                        <form method='post'>
+                            От:
+                            <input type="text" name="price" id="price" maxlength="10">
+                            До:
+                            <input type="text" name="price" id="price2" maxlength="10">
+                            руб.
+                        </form>
+                    </div>
+                    <div id="slider_price"></div>
+                </dd>
+
+                <dt class="filter-name">Вид напитка</dt>
+                <dd class="option">
+                    <ol>
+                        <li><input id="itemFilter1" type="checkbox" onclick="getAjaxHtml5()" /><label for="itemFilter1">Кофе </label></li>
+                        <li><input id="itemFilter2" type="checkbox" onclick="getAjaxHtml5()" /><label for="itemFilter2">Кофе с молоком</label></li>
+                        <li><input id="itemFilter3" type="checkbox" onclick="getAjaxHtml5()" /><label for="itemFilter3">Горячий шоколад</label></li>
+                    </ol>
+                </dd>
+            </dl>
+
+        </div>
+        <div>
+            <section class="CoffeemachinesOutside">
+                <div id="block" class="banner custom">
+
+
+                    <ul id="lightslider">
+                        <li><img src="~/Images/Akcii/Action1.jpg" /></li>
+                        <li><img src="~/Images/Akcii/Action2.jpg" /> </li>
+                        <li><img src="~/Images/Akcii/Action3.jpg" /> </li>
+                        <li><img src="~/Images/Akcii/Action4.jpg" /></li>
+                    </ul>
+                </div>
+
+
+                <script>
+                    $(window).load(function () {
+
+                        $('#lightslider').lightSlider({
+                            item: 1,
+                            loop: true,
+                            autoWidth: true,
+                            auto: true,
+                            pause: 3000,
+
+                        });
+                    });
+
+
+                    function checkitem1() {
+                        if (itemFilter1.checked || (!itemFilter1.checked && !itemFilter2.checked && !itemFilter3.checked)) {
+                            return 'CoffeeBlack'
+                        } else {
+                            return 'Undefined'
+                        }
+                    }
+                    function checkitem2() {
+                        if (itemFilter2.checked || (!itemFilter2.checked && !itemFilter1.checked && !itemFilter3.checked)) {
+                            return 'CoffeeMilk'
+                        } else {
+                            return 'Undefined'
+                        }
+                    }
+                    function checkitem3() {
+                        if (itemFilter3.checked || (!itemFilter3.checked && !itemFilter2.checked && !itemFilter1.checked)) {
+                            return 'Chokolate'
+                        } else {
+                            return 'Undefined'
+                        }
+                    }
+                </script>
+                <script>
+                    $(function () {
+                        $('#price').change(function () {
+                            var val = $(this).val();
+                            $('#slider_price').slider("values", 0, val);
+                            $(function (event, ui) { getAjaxHtml5() });
+
+                        });
+                        $('#price2').change(function () {
+                            var val1 = $(this).val();
+                            $('#slider_price').slider("values", 1, val1);
+                            $(function (event, ui) { getAjaxHtml5() });
+                        });
+
+
+                        $("#slider_price").slider({
+                            range: true,
+                            min: 378,
+                            max: 420,
+                            values: [378, 420],
+                            slide: function (event, ui) {
+                                //Поле минимального значения
+                                $("#price").val(ui.values[0]);
+                                //Поле максимального значения
+                                $("#price2").val(ui.values[1]);
+
+                            },
+                            stop: function (event, ui) { getAjaxHtml5() }
+                        });
+                        //Записываем значения ползунков в момент загрузки страницы
+                        //То есть значения по умолчанию
+                        $("#price").val($("#slider_price").slider("values", 0));
+                        $("#price2").val($("#slider_price").slider("values", 1));
+                    });
+                </script>
+
+            </section>
+
+            <section class="Napitki">
+                <header>
+                    <h2>@ViewBag.Title</h2>
+                </header>
+                <div id="Items">
+
+                </div>
+            </section>
+
+            <section class="Napitki">
+
+                <div class="float-right">
+                    <p class="float-right">
+                        <h1>Безупречный кофе одним нажатием кнопки</h1>
+                        <br>
+                        Капсульный кофе– один из самых популярных напитков на рынке. Необыкновенный аромат и возможность без труда приготовить настоящее произведение кофейного искусства — вот рецепт безусловного успеха капсул. NESCAFÉ® Dolce Gusto® приглашаеткофейныхгурманов в увлекательное путешествие по вкусовым оттенкам настоящего зернового кофе, который теперь, с капсулами NESCAFÉ® Dolce Gusto® и кофемашинами Krups, стал еще доступнее, чем прежде.
+                        <br>
+                        <h1>Отборные зерна, капсула и кофемашина – идеальное трио</h1>
+                        <br>
+                        Как известно, зерна кофе — капризный продукт, чувствительный к открытому воздуху, влажности и посторонним запахам. Владельцам зерновых кофемашин знакома проблема, когда открытая ради одной чашки пачка превосходного кофе через несколько дней начинает терять свой восхитительный аромат.<br><br>
+
+                        Кофе в капсулах — это универсальное решение, которое позволяет сохранить всю палитру богатых оттенков запаха и вкуса. Внутрь кофейной капсулы помещается молотое и предварительно обжаренное кофейное зерно. NESCAFÉ® Dolce Gusto® заботится о том, чтобы капсулы NESCAFÉ® Dolce Gusto® включали только избранныезерна и кофе наивысшего качества.<br><br>
+
+                        Герметичная упаковка капсулы позволяет продукту храниться внутри, не меняя своих вкусовых свойств. Капсульный кофе может ждать своего часа многие недели, а затем раскрыться в одной чашке, поразив глубиной аромата и вкуса. Вы словно всякий раз пьете кофе, приготовленный из свежеобжаренного и только что смолотого кофейного зерна. А уникальные свойства кофемашин NESCAFÉ® Dolce Gusto® производства компанииKrups позволяют получить максимум наслаждения от напитка, благодаря автоматизированному процессу приготовления. Больше не нужно экспериментировать со степенью помола и температурой воды — современная, удобная и стильная кофемашина сделает все за вас.<br><br>
+
+                        <br>
+                        <h1>Один кофе — тысяча вкусов</h1>
+                        <br>
+
+                        NESCAFÉ® Dolce Gusto® может похвастаться необыкновенным разнообразием вкусов классического черного кофе, который, сохраняя свою крепость и насыщенность, всякий раз будет удивлять вас новыми оттенками.<br><br>
+
+                        Предпочитаете непреходящую классику? Для вас — классический эспрессо в восьми вариациях, от сверхнасыщенного ристретто до нежнейшего сливочно-крепкого кортадо. Карамельный привкус или взрывной контраст, мягкие ореховые нотки или легкий аромат лакрицы — среди множества вариаций черного кофе в капсулах вы можете выбрать свой идеальный.<br><br>
+                        Любите мягкий американо? Обратите внимание на капсульный американо NESCAFÉ® Dolce Gusto® с легкой, приятной горчинкой.А если без горчинки?Тогда вам подойдет гибкий вкус и приятная пенка черного гранде. Напротив, любите больше горечи? Приглашаем в мир насыщенных оттенков гранде интенсо. Готовы провести свой кофе-брейк за столиком итальянского кафе в солнечный день? Попробуйте мягкий сбалансированный лунго, способный перенести вас в сердце Италии.<br><br>
+
+                        Весь богатый мир черного кофе доступен для вас в официальном интернет-магазине NESCAFÉ® Dolce Gusto®, где можно приобрести не только кофейные капсулы, но и кофемашины, а также аксессуары, чашки и предметы сервировки.Больше не нужно ломать голову над выбором сорта кофе или искать качественный продукт по умеренной стоимости — в магазине NESCAFÉ® Dolce Gusto® вы найдете все, что нужно.<br><br>
+
+
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>

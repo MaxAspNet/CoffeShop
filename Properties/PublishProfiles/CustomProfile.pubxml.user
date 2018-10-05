@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://Coffee-Shop-Demonstration.somee.com/www.Coffee-Shop-Demonstration.somee.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>04/21/2018 10:50:10</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 07:43:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/22/2013 07:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>04/21/2018 10:50:10</publishTime>
+    </File>
+    <File Include="bin/Aprel.dll">
+      <publishTime>09/23/2018 09:26:23</publishTime>
+    </File>
+    <File Include="bin/Aprel.pdb">
+      <publishTime>09/23/2018 09:26:23</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 08:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 08:32:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 15:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/07/2016 10:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/07/2016 10:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/06/2016 14:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/07/2016 10:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/07/2016 10:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/06/2016 14:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/03/2015 16:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/03/2015 16:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/03/2015 16:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>10/16/2017 13:14:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>02/13/2015 12:16:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>02/13/2015 12:16:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>02/13/2015 12:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>02/13/2015 12:16:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>02/13/2015 12:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>02/13/2015 12:16:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>02/13/2015 12:16:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>02/13/2015 12:16:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>02/13/2015 12:16:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/05/2012 10:08:46</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 19:33:56</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/27/2012 12:00:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>09/21/2017 22:42:00</publishTime>
+    </File>
+    <File Include="bin/ru/EntityFramework.resources.dll">
+      <publishTime>03/02/2015 08:32:38</publishTime>
+    </File>
+    <File Include="bin/ru/EntityFramework.SqlServer.resources.dll">
+      <publishTime>03/02/2015 08:32:38</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.AspNet.Identity.Core.resources.dll">
+      <publishTime>04/03/2015 16:09:50</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
+      <publishTime>04/03/2015 16:09:52</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.AspNet.Identity.Owin.resources.dll">
+      <publishTime>04/03/2015 16:09:52</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.Host.SystemWeb.resources.dll">
+      <publishTime>02/13/2015 12:24:52</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.resources.dll">
+      <publishTime>02/13/2015 12:24:52</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.Security.Facebook.resources.dll">
+      <publishTime>02/13/2015 12:24:52</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.Security.Google.resources.dll">
+      <publishTime>02/13/2015 12:24:54</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.Security.MicrosoftAccount.resources.dll">
+      <publishTime>02/13/2015 12:24:54</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.Security.resources.dll">
+      <publishTime>02/13/2015 12:24:54</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Owin.Security.Twitter.resources.dll">
+      <publishTime>02/13/2015 12:24:54</publishTime>
+    </File>
+    <File Include="bin/ru/System.Net.Http.Formatting.resources.dll">
+      <publishTime>01/28/2015 03:02:52</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.Helpers.resources.dll">
+      <publishTime>01/28/2015 03:04:40</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.Http.resources.dll">
+      <publishTime>01/28/2015 03:03:04</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.Http.WebHost.resources.dll">
+      <publishTime>01/28/2015 03:03:54</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.Mvc.resources.dll">
+      <publishTime>01/28/2015 03:02:30</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.Optimization.resources.dll">
+      <publishTime>02/11/2014 14:28:42</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.Razor.resources.dll">
+      <publishTime>01/28/2015 03:02:40</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>01/28/2015 03:04:40</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>01/28/2015 03:04:40</publishTime>
+    </File>
+    <File Include="bin/ru/System.Web.WebPages.resources.dll">
+      <publishTime>01/28/2015 03:04:40</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 03:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 03:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 03:03:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 03:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 14:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 03:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 16:28:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/25/2018 18:44:49</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/22/2018 11:52:59</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.css">
+      <publishTime>08/25/2018 19:46:14</publishTime>
+    </File>
+    <File Include="Content/lightslider.css">
+      <publishTime>09/13/2018 23:00:11</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>09/13/2018 22:42:32</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>08/25/2018 16:34:18</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/21/2018 10:49:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/02/2018 13:19:08</publishTime>
+    </File>
+    <File Include="Images/01_piccolo_krups_anthracite.jpg">
+      <publishTime>07/24/2017 12:30:05</publishTime>
+    </File>
+    <File Include="Images/1_circolo_krups_red.jpg">
+      <publishTime>07/24/2017 12:30:10</publishTime>
+    </File>
+    <File Include="Images/1_melody3_krups_black.jpg">
+      <publishTime>07/24/2017 12:30:19</publishTime>
+    </File>
+    <File Include="Images/1_oblo_krups_pianoblack.jpg">
+      <publishTime>07/24/2017 12:30:15</publishTime>
+    </File>
+    <File Include="Images/accent.png">
+      <publishTime>07/01/2017 18:19:47</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor1/Accessor1.jpg">
+      <publishTime>08/08/2017 12:54:42</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor1/Accessor11.jpg">
+      <publishTime>08/08/2017 12:54:42</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor1/Accessor12.jpg">
+      <publishTime>08/08/2017 12:54:42</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor1/Accessor1Small.jpg">
+      <publishTime>08/08/2017 13:15:23</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor2/Accessor21.jpg">
+      <publishTime>08/08/2017 21:35:57</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor2/Accessor22.jpg">
+      <publishTime>08/08/2017 21:35:57</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor2/Accessor23.jpg">
+      <publishTime>08/08/2017 21:35:57</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor2/Accessor2Small.jpg">
+      <publishTime>08/08/2017 21:37:21</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor3/Accessor31.jpg">
+      <publishTime>08/08/2017 21:24:01</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor3/Accessor32.jpg">
+      <publishTime>08/08/2017 21:24:01</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor3/Accessor33.jpg">
+      <publishTime>08/08/2017 21:24:00</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor3/Accessor3Small.jpg">
+      <publishTime>07/26/2017 19:07:18</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor4/Accessor41.jpg">
+      <publishTime>08/08/2017 21:28:10</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor4/Accessor42.jpg">
+      <publishTime>08/08/2017 21:28:10</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor4/Accessor43.jpg">
+      <publishTime>08/08/2017 21:28:10</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor4/Accessor4Small.jpg">
+      <publishTime>07/26/2017 19:07:23</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor5/Accessor51.jpg">
+      <publishTime>08/08/2017 21:30:16</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor5/Accessor52.jpg">
+      <publishTime>08/08/2017 21:30:16</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor5/Accessor53.jpg">
+      <publishTime>08/08/2017 21:30:16</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor5/Accessor5Small.jpg">
+      <publishTime>07/26/2017 19:07:27</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor6/Accessor61.jpg">
+      <publishTime>08/08/2017 21:33:04</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor6/Accessor62.jpg">
+      <publishTime>08/08/2017 21:33:04</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor6/Accessor63.jpg">
+      <publishTime>08/08/2017 21:33:04</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor6/Accessor6Small.jpg">
+      <publishTime>07/26/2017 19:07:31</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor7/Accessor71.jpg">
+      <publishTime>08/08/2017 21:58:42</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor7/Accessor72.jpg">
+      <publishTime>08/08/2017 21:43:27</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor7/Accessor7Small.jpg">
+      <publishTime>08/08/2017 21:43:27</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor8/Accessor81.jpg">
+      <publishTime>08/08/2017 21:46:06</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor8/Accessor82.jpg">
+      <publishTime>08/08/2017 21:46:06</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor8/Accessor83.jpg">
+      <publishTime>08/08/2017 21:46:06</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor8/Accessor8Small.jpg">
+      <publishTime>08/08/2017 21:46:06</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor9/Accessor91.jpg">
+      <publishTime>08/08/2017 21:48:25</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor9/Accessor92.jpg">
+      <publishTime>08/08/2017 21:48:25</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor9/Accessor93.jpg">
+      <publishTime>08/08/2017 21:48:25</publishTime>
+    </File>
+    <File Include="Images/Accessories/Accessor9/Accessor9Small.jpg">
+      <publishTime>08/08/2017 21:48:25</publishTime>
+    </File>
+    <File Include="Images/Akcii/Action1.jpg">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/Akcii/Action11.png">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/Akcii/Action12.png">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/Akcii/Action2.jpg">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/Akcii/Action3.jpg">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/Akcii/Action4.jpg">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/Akcii/ActionSmall.png">
+      <publishTime>08/07/2017 14:46:17</publishTime>
+    </File>
+    <File Include="Images/btn_cart.png">
+      <publishTime>09/13/2018 11:04:24</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>07/01/2017 18:19:47</publishTime>
+    </File>
+    <File Include="Images/CIRCOLO_FS.jpg">
+      <publishTime>07/26/2017 22:31:24</publishTime>
+    </File>
+    <File Include="Images/concept_05_01_introduction_2_.png">
+      <publishTime>07/21/2017 11:07:42</publishTime>
+    </File>
+    <File Include="Images/controls.png">
+      <publishTime>02/28/2018 21:38:14</publishTime>
+    </File>
+    <File Include="Images/favicon.ico">
+      <publishTime>07/16/2018 17:08:25</publishTime>
+    </File>
+    <File Include="Images/GENIO_2.jpg">
+      <publishTime>07/26/2017 22:29:58</publishTime>
+    </File>
+    <File Include="Images/heroAccent.png">
+      <publishTime>07/01/2017 18:19:47</publishTime>
+    </File>
+    <File Include="Images/Logo.png">
+      <publishTime>07/07/2017 12:11:26</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines01/Machine11.jpg">
+      <publishTime>08/09/2017 15:39:45</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines01/Machine12.jpg">
+      <publishTime>08/09/2017 15:39:45</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines01/Machine13.jpg">
+      <publishTime>08/09/2017 15:39:45</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines01/Machine1Small.jpg">
+      <publishTime>08/09/2017 15:39:45</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines02/Machine21.jpg">
+      <publishTime>08/09/2017 15:40:08</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines02/Machine22.jpg">
+      <publishTime>08/09/2017 15:40:08</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines02/Machine23.jpg">
+      <publishTime>08/09/2017 15:40:08</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines02/Machine2Small.jpg">
+      <publishTime>08/09/2017 15:40:08</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines03/Machine31.jpg">
+      <publishTime>08/09/2017 15:40:37</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines03/Machine32.jpg">
+      <publishTime>08/09/2017 15:40:37</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines03/Machine33.jpg">
+      <publishTime>08/09/2017 15:40:37</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines03/Machine3Small.jpg">
+      <publishTime>08/09/2017 15:40:37</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines04/Machine41.jpg">
+      <publishTime>08/09/2017 15:40:57</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines04/Machine42.jpg">
+      <publishTime>08/09/2017 15:40:57</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines04/Machine43.jpg">
+      <publishTime>08/09/2017 15:40:57</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines04/Machine4Small.jpg">
+      <publishTime>08/09/2017 15:40:57</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines05/Machine51.jpg">
+      <publishTime>08/09/2017 15:41:49</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines05/Machine52.jpg">
+      <publishTime>08/09/2017 15:41:49</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines05/Machine53.jpg">
+      <publishTime>08/09/2017 15:41:49</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines05/Machine5Small.jpg">
+      <publishTime>08/09/2017 15:41:49</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines06/Machine61.jpg">
+      <publishTime>08/09/2017 15:41:56</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines06/Machine62.jpg">
+      <publishTime>08/09/2017 15:41:56</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines06/Machine63.jpg">
+      <publishTime>08/09/2017 15:41:56</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines06/Machine6Small.jpg">
+      <publishTime>08/09/2017 15:41:56</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines07/Machine71.jpg">
+      <publishTime>08/09/2017 15:42:03</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines07/Machine72.jpg">
+      <publishTime>08/09/2017 15:42:03</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines07/Machine73.jpg">
+      <publishTime>08/09/2017 15:42:03</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines07/Machine7Small.jpg">
+      <publishTime>08/09/2017 15:42:03</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines08/Machine81.jpg">
+      <publishTime>08/09/2017 15:42:10</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines08/Machine82.jpg">
+      <publishTime>08/09/2017 15:42:10</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines08/Machine83.jpg">
+      <publishTime>08/09/2017 15:42:10</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines08/Machine8Small.jpg">
+      <publishTime>08/09/2017 15:42:10</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines09/Machine91.jpg">
+      <publishTime>08/09/2017 15:42:24</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines09/Machine92.jpg">
+      <publishTime>08/09/2017 15:42:24</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines09/Machine93.jpg">
+      <publishTime>08/09/2017 15:42:24</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines09/Machine9Small.jpg">
+      <publishTime>08/09/2017 15:42:24</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines10/Machine101.jpg">
+      <publishTime>08/09/2017 15:42:31</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines10/Machine102.jpg">
+      <publishTime>08/09/2017 15:42:31</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines10/Machine103.jpg">
+      <publishTime>08/09/2017 15:42:31</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines10/Machine10Small.jpg">
+      <publishTime>08/09/2017 15:42:31</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines11/Machine111.jpg">
+      <publishTime>08/09/2017 15:43:05</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines11/Machine112.jpg">
+      <publishTime>08/09/2017 15:43:05</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines11/Machine113.jpg">
+      <publishTime>08/09/2017 15:43:05</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines11/Machine11Small.jpg">
+      <publishTime>08/09/2017 15:43:05</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines12/Machine121.jpg">
+      <publishTime>08/09/2017 15:43:18</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines12/Machine122.jpg">
+      <publishTime>08/09/2017 15:43:18</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines12/Machine123.jpg">
+      <publishTime>08/09/2017 15:43:18</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines12/Machine12Small.jpg">
+      <publishTime>08/09/2017 15:43:18</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines13/Machine131.jpg">
+      <publishTime>08/09/2017 15:43:27</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines13/Machine132.jpg">
+      <publishTime>08/09/2017 15:43:27</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines13/Machine133.jpg">
+      <publishTime>08/09/2017 15:43:27</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines13/Machine13Small.jpg">
+      <publishTime>08/09/2017 15:43:27</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines14/Machine141.jpg">
+      <publishTime>08/09/2017 15:43:34</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines14/Machine142.jpg">
+      <publishTime>08/09/2017 15:43:34</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines14/Machine143.jpg">
+      <publishTime>08/09/2017 15:43:34</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines14/Machine14Small.jpg">
+      <publishTime>08/09/2017 15:43:34</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines15/Machine151.jpg">
+      <publishTime>08/09/2017 15:43:45</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines15/Machine152.jpg">
+      <publishTime>08/09/2017 15:43:45</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines15/Machine153.jpg">
+      <publishTime>08/09/2017 15:43:44</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines15/Machine15Small.jpg">
+      <publishTime>08/09/2017 15:43:44</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines16/Machine161.jpg">
+      <publishTime>08/09/2017 15:43:49</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines16/Machine16Small.jpg">
+      <publishTime>08/09/2017 15:44:04</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines17/Machine171.jpg">
+      <publishTime>08/09/2017 15:43:57</publishTime>
+    </File>
+    <File Include="Images/Machines/Machines17/Machine17Small.jpg">
+      <publishTime>08/09/2017 15:44:09</publishTime>
+    </File>
+    <File Include="Images/MELODY_2.jpg">
+      <publishTime>07/26/2017 22:28:38</publishTime>
+    </File>
+    <File Include="Images/MELODY_3.jpg">
+      <publishTime>07/26/2017 22:31:00</publishTime>
+    </File>
+    <File Include="Images/MELODY_3_FS.jpg">
+      <publishTime>07/26/2017 22:29:16</publishTime>
+    </File>
+    <File Include="Images/MINI-ME.jpg">
+      <publishTime>07/26/2017 22:30:22</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok01/Napitok11.jpg">
+      <publishTime>08/09/2017 12:41:50</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok01/Napitok12.jpg">
+      <publishTime>08/09/2017 12:41:50</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok01/Napitok13.jpg">
+      <publishTime>08/09/2017 12:41:50</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok01/Napitok1Small.jpg">
+      <publishTime>07/25/2017 10:14:27</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok02/Napitok21.jpg">
+      <publishTime>08/09/2017 12:41:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok02/Napitok22.jpg">
+      <publishTime>08/09/2017 12:41:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok02/Napitok23.jpg">
+      <publishTime>08/09/2017 12:41:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok02/Napitok2Small.jpg">
+      <publishTime>07/25/2017 10:14:11</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok03/Napitok31.jpg">
+      <publishTime>08/09/2017 12:41:22</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok03/Napitok32.jpg">
+      <publishTime>08/09/2017 12:41:22</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok03/Napitok33.jpg">
+      <publishTime>08/09/2017 12:41:22</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok03/Napitok3Small.jpg">
+      <publishTime>07/25/2017 10:14:18</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok04/Napitok41.jpg">
+      <publishTime>08/09/2017 12:41:08</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok04/Napitok42.jpg">
+      <publishTime>08/09/2017 12:41:08</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok04/Napitok43.jpg">
+      <publishTime>08/09/2017 12:41:08</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok04/Napitok4Small.jpg">
+      <publishTime>07/25/2017 10:14:22</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok05/Napitok51.jpg">
+      <publishTime>08/09/2017 12:40:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok05/Napitok52.jpg">
+      <publishTime>08/09/2017 12:40:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok05/Napitok53.jpg">
+      <publishTime>08/09/2017 12:40:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok05/Napitok5Small.jpg">
+      <publishTime>08/09/2017 12:40:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok06/Napitok61.jpg">
+      <publishTime>08/09/2017 12:40:40</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok06/Napitok62.jpg">
+      <publishTime>08/09/2017 12:40:40</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok06/Napitok63.jpg">
+      <publishTime>08/09/2017 12:40:40</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok06/Napitok6Small.jpg">
+      <publishTime>08/09/2017 12:40:40</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok07/Napitok71.jpg">
+      <publishTime>08/09/2017 12:40:29</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok07/Napitok72.jpg">
+      <publishTime>08/09/2017 12:40:29</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok07/Napitok73.jpg">
+      <publishTime>08/09/2017 12:40:29</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok07/Napitok7Small.jpg">
+      <publishTime>08/09/2017 12:40:29</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok08/Napitok81.jpg">
+      <publishTime>08/09/2017 12:40:13</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok08/Napitok82.jpg">
+      <publishTime>08/09/2017 12:40:13</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok08/Napitok83.jpg">
+      <publishTime>08/09/2017 12:40:13</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok08/Napitok8Small.jpg">
+      <publishTime>08/09/2017 12:40:13</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok09/Napitok91.jpg">
+      <publishTime>08/09/2017 12:42:31</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok09/Napitok92.jpg">
+      <publishTime>08/09/2017 12:42:31</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok09/Napitok93.jpg">
+      <publishTime>08/09/2017 12:42:31</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok09/Napitok9Small.jpg">
+      <publishTime>08/09/2017 12:47:46</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok10/Napitok101.jpg">
+      <publishTime>08/09/2017 12:39:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok10/Napitok102.jpg">
+      <publishTime>08/09/2017 12:39:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok10/Napitok103.jpg">
+      <publishTime>08/09/2017 12:39:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok10/Napitok10Small.jpg">
+      <publishTime>08/09/2017 12:39:35</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok11/Napitok111.jpg">
+      <publishTime>08/09/2017 12:39:12</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok11/Napitok112.jpg">
+      <publishTime>08/09/2017 12:39:12</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok11/Napitok113.jpg">
+      <publishTime>08/09/2017 12:39:12</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok11/Napitok11Small.jpg">
+      <publishTime>08/09/2017 12:39:12</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok12/Napitok121.jpg">
+      <publishTime>08/09/2017 12:38:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok12/Napitok122.jpg">
+      <publishTime>08/09/2017 12:38:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok12/Napitok123.jpg">
+      <publishTime>08/09/2017 12:38:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok12/Napitok12Small.jpg">
+      <publishTime>08/09/2017 12:38:55</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok13/Napitok131.jpg">
+      <publishTime>08/09/2017 12:38:34</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok13/Napitok132.jpg">
+      <publishTime>08/09/2017 12:38:34</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok13/Napitok133.jpg">
+      <publishTime>08/09/2017 12:38:34</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok13/Napitok13Small.jpg">
+      <publishTime>08/09/2017 12:38:34</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok14/Napitok141.jpg">
+      <publishTime>08/09/2017 12:38:20</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok14/Napitok142.jpg">
+      <publishTime>08/09/2017 12:38:20</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok14/Napitok143.jpg">
+      <publishTime>08/09/2017 12:38:20</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok14/Napitok14Small.jpg">
+      <publishTime>08/09/2017 12:38:20</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok15/Napitok151.jpg">
+      <publishTime>08/09/2017 12:37:44</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok15/Napitok152.jpg">
+      <publishTime>08/09/2017 12:37:44</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok15/Napitok153.jpg">
+      <publishTime>08/09/2017 12:37:44</publishTime>
+    </File>
+    <File Include="Images/Napitki/Napitok15/Napitok15Small.jpg">
+      <publishTime>08/09/2017 12:37:44</publishTime>
+    </File>
+    <File Include="Images/OKnestlelogo.png">
+      <publishTime>09/14/2018 08:57:55</publishTime>
+    </File>
+    <File Include="Images/Slider/1.jpg">
+      <publishTime>08/05/2017 20:22:05</publishTime>
+    </File>
+    <File Include="Images/Slider/2.jpg">
+      <publishTime>08/05/2017 20:22:05</publishTime>
+    </File>
+    <File Include="Images/Slider/3.jpg">
+      <publishTime>08/05/2017 20:22:05</publishTime>
+    </File>
+    <File Include="Images/Slider/4.jpg">
+      <publishTime>08/05/2017 20:22:05</publishTime>
+    </File>
+    <File Include="Images/ассортимент.png">
+      <publishTime>05/15/2017 10:46:30</publishTime>
+    </File>
+    <File Include="Images/Доставка по Москве.png">
+      <publishTime>05/15/2017 10:47:05</publishTime>
+    </File>
+    <File Include="Images/доставка.png">
+      <publishTime>05/15/2017 10:46:08</publishTime>
+    </File>
+    <File Include="Images/связаться с нами.png">
+      <publishTime>05/15/2017 10:47:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/21/2018 10:49:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/21/2018 10:49:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.0.min.js">
+      <publishTime>04/29/2018 16:14:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.12.4.js">
+      <publishTime>08/25/2018 17:14:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.js">
+      <publishTime>08/25/2018 17:14:25</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/21/2018 10:50:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/21/2018 10:50:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/21/2018 10:50:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/21/2018 10:50:01</publishTime>
+    </File>
+    <File Include="Scripts/lightslider.js">
+      <publishTime>04/30/2018 11:44:21</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/21/2018 10:49:58</publishTime>
+    </File>
+    <File Include="Scripts/price/jquery-ui.js">
+      <publishTime>08/23/2018 09:51:40</publishTime>
+    </File>
+    <File Include="Scripts/price/jquery-ui.min.js">
+      <publishTime>08/23/2018 09:51:40</publishTime>
+    </File>
+    <File Include="Scripts/price/jquery.js">
+      <publishTime>08/23/2018 09:51:40</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/21/2018 10:50:00</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/21/2018 10:50:00</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>04/21/2018 10:50:04</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>04/21/2018 10:50:04</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>04/21/2018 10:50:04</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>05/05/2018 10:25:42</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>04/21/2018 10:50:05</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>05/05/2018 11:05:44</publishTime>
+    </File>
+    <File Include="Views/Cart/Index.cshtml">
+      <publishTime>05/02/2018 13:08:49</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>04/21/2018 10:49:41</publishTime>
+    </File>
+    <File Include="Views/Home/AccessorDetails.cshtml">
+      <publishTime>09/14/2018 12:30:19</publishTime>
+    </File>
+    <File Include="Views/Home/Accessories.cshtml">
+      <publishTime>09/13/2018 22:17:06</publishTime>
+    </File>
+    <File Include="Views/Home/Akcii.cshtml">
+      <publishTime>04/22/2018 15:20:15</publishTime>
+    </File>
+    <File Include="Views/Home/CoffeemachineDetails.cshtml">
+      <publishTime>09/14/2018 12:29:53</publishTime>
+    </File>
+    <File Include="Views/Home/Coffeemachines.cshtml">
+      <publishTime>09/13/2018 22:10:10</publishTime>
+    </File>
+    <File Include="Views/Home/Conditions.cshtml">
+      <publishTime>09/14/2018 08:40:08</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>09/14/2018 10:36:54</publishTime>
+    </File>
+    <File Include="Views/Home/Coocies.cshtml">
+      <publishTime>09/14/2018 08:34:56</publishTime>
+    </File>
+    <File Include="Views/Home/Dostavka.cshtml">
+      <publishTime>09/11/2018 11:09:31</publishTime>
+    </File>
+    <File Include="Views/Home/FAQ.cshtml">
+      <publishTime>09/14/2018 08:38:01</publishTime>
+    </File>
+    <File Include="Views/Home/Help.cshtml">
+      <publishTime>09/14/2018 09:11:24</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/11/2018 11:09:03</publishTime>
+    </File>
+    <File Include="Views/Home/Napitki.cshtml">
+      <publishTime>09/13/2018 22:16:16</publishTime>
+    </File>
+    <File Include="Views/Home/NapitokDetails.cshtml">
+      <publishTime>09/14/2018 12:36:32</publishTime>
+    </File>
+    <File Include="Views/Home/Politic.cshtml">
+      <publishTime>09/14/2018 08:26:08</publishTime>
+    </File>
+    <File Include="Views/Home/_Accessories.cshtml">
+      <publishTime>08/19/2018 12:44:01</publishTime>
+    </File>
+    <File Include="Views/Home/_Coffeemachines.cshtml">
+      <publishTime>09/14/2018 11:59:55</publishTime>
+    </File>
+    <File Include="Views/Home/_Napitki.cshtml">
+      <publishTime>08/19/2018 12:06:54</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/21/2018 10:50:04</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>04/21/2018 10:50:05</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/14/2018 12:47:11</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>09/14/2018 10:36:09</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/05/2018 11:05:45</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/21/2018 10:49:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/23/2018 09:32:55</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

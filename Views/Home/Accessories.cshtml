@@ -1,0 +1,185 @@
+﻿@model List<Aprel.Models.Item>
+
+@{
+    ViewBag.Title = "Аксессуары для кофемашин и кофе";
+}
+
+
+<body onload="getAjaxHtml3();">
+
+    <div class="breadcrumbs"><a href="@Url.Action("Index", "Home")">Home</a>        >      АКСЕССУАРЫ</div>
+    <div style="padding-top: 24px;">
+        <div class="chooser">
+            <dl>
+                <dt class="filter-name">Цена</dt>
+
+
+                <dd class="option">
+                    <div id='options'>
+                        <form method='post'>
+                            От:
+                            <input type="text" name="price" id="price" maxlength="10">
+                            До:
+                            <input type="text" name="price" id="price2" maxlength="10">
+                            руб.
+
+                        </form>
+                    </div>
+                    <div id="slider_price"></div>
+                </dd>
+
+
+
+
+                <dt class="filter-name">Категория</dt>
+                <dd class="option">
+                    <ol>
+                        <li><input id="itemFilter1" type="checkbox" onclick="getAjaxHtml3()" /><label for="itemFilter1"> Стаканы </label></li>
+                        <li><input id="itemFilter2" type="checkbox" onclick="getAjaxHtml3()" /><label for="itemFilter2">  Чашки </label></li>
+                        <li><input id="itemFilter3" type="checkbox" onclick="getAjaxHtml3()" /><label for="itemFilter3">  Ложки </label></li>
+                    </ol>
+                </dd>
+            </dl>
+
+        </div>
+        <div>
+            <section class="CoffeemachinesOutside">
+                <div id="block" class="banner custom">
+
+                    <ul id="lightslider">
+                        <li><img src="~/Images/Akcii/Action1.jpg" /></li>
+                        <li><img src="~/Images/Akcii/Action2.jpg" /> </li>
+                        <li><img src="~/Images/Akcii/Action3.jpg" /> </li>
+                        <li><img src="~/Images/Akcii/Action4.jpg" /></li>
+                    </ul>
+                </div>
+
+
+                <script>
+                    $(function () {
+                        $('#price').change(function () {
+                            var val = $(this).val();
+                            $('#slider_price').slider("values", 0, val);
+                            $(function (event, ui) { getAjaxHtml3() });
+
+                        });
+                        $('#price2').change(function () {
+                            var val1 = $(this).val();
+                            $('#slider_price').slider("values", 1, val1);
+                            $(function (event, ui) { getAjaxHtml3() });
+                        });
+
+
+                        $("#slider_price").slider({
+                            range: true,
+                            min: 0,
+                            max: 2000,
+                            values: [0, 2000],
+                            slide: function (event, ui) {
+                                //Поле минимального значения
+                                $("#price").val(ui.values[0]);
+                                //Поле максимального значения
+                                $("#price2").val(ui.values[1]);
+
+                            },
+                            stop: function (event, ui) { getAjaxHtml3() }
+                        });
+                        //Записываем значения ползунков в момент загрузки страницы
+                        //То есть значения по умолчанию
+                        $("#price").val($("#slider_price").slider("values", 0));
+                        $("#price2").val($("#slider_price").slider("values", 1));
+                    });
+                </script>
+
+                <script>
+
+                    $(window).load(function () {
+
+                        $('#lightslider').lightSlider({
+                            item: 1,
+                            loop: true,
+                            autoWidth: true,
+                            auto: true,
+                            pause: 3000,
+
+                        });
+                    });
+
+
+                    function checkprice1() {
+                        if (priceFilter1.checked || (!priceFilter1.checked && !priceFilter2.checked)) {
+                            return '0'
+                        } else {
+                            return '1200'
+                        }
+                    }
+
+                    function checkprice2() {
+                        if (priceFilter2.checked || (!priceFilter2.checked && !priceFilter1.checked)) {
+                            return '2000'
+                        } else {
+                            return '1200'
+                        }
+                    }
+
+                    function checkitem1() {
+                        if (itemFilter1.checked || (!itemFilter1.checked && !itemFilter2.checked && !itemFilter3.checked)) {
+                            return 'Glasses'
+                        } else {
+                            return 'Undefined'
+                        }
+                    }
+                    function checkitem2() {
+                        if (itemFilter2.checked || (!itemFilter2.checked && !itemFilter1.checked && !itemFilter3.checked)) {
+                            return 'Cups'
+                        } else {
+                            return 'Undefined'
+                        }
+                    }
+                    function checkitem3() {
+                        if (itemFilter3.checked || (!itemFilter3.checked && !itemFilter2.checked && !itemFilter1.checked)) {
+                            return 'Spoons'
+                        } else {
+                            return 'Undefined'
+                        }
+                    }
+
+
+                </script>
+                <section class="Napitki">
+                    <header>
+                        <h2>@ViewBag.Title</h2>
+                    </header>
+                    <div id="Items"></div>
+                </section>
+                <section class="Coffeemachines">
+                    <div class="float-right">
+                        <p>
+                            <h1>Аксессуары для кофемашины</h1><br>
+                            <br>
+                            Такая необходимая сегодня покупка кофемашины NESCAFE® Dolce Gusto® принесет еще больше удовольствия и удобства, если не забыть о сопутствующих устройству фирменных аксессуарах. Они созданы специально для того, чтобы сделать свидание с чашечкой кофе максимально приятным и комфортным. Аксессуары для кофемашины — это специальные чашки и ложки, держатели для капсул, которые не только сохраняют функциональность самого устройства, но и передают особую атмосферу для наслаждения напитками.<br>
+                            <br>
+                            <h1>Ассортимент аксессуаров для кофемашины</h1><br>
+                            <br>
+                            Едва ли можно поспорить с тем, что ароматный и крепкий эспрессо интереснее всего смотрится в специальных чашках-демитассе, а мягкий гранде с нежной пенкой – в прозрачных кофейных стаканах. Все эти аксессуары от марки были специально разработаны дизайнерами Dolce Gusto с учетом всех требований качества. Современный и эстетичный внешний вид сочетается с использованием термостойкого стекла – чашки и стаканы из него не позволяют обжигать руки, при этом надолго сохраняя температуру напитка.<br>
+                            Особенную изящность Вашему напитку придадут фирменные ложки для кофе от NESCAFE® Dolce Gusto®. Изящные маленькие ложечки для эспрессо, удобные длинные ложки для латте макиато или классические десертные наборы — здесь найдутся аксессуары на самый взыскательный вкус. Кофе, поданный в специальном стакане и оформленный красивой ложкой, подчеркнет особенный статус вашего дома и выразит особенную заботу о гостях лучше, чем тысяча слов.  <br>
+                            Отдельно стоит отметить держатели для  капсул. Они не только делают процесс приготовления кофе еще более удобным, но и украшают пространство. Смотреть на разноцветные капсулы NESCAFE® Dolce Gusto®, аккуратно выставленные в прозрачных экстендерах — это настоящее эстетическое удовольствие. Нет нужды постоянно доставать коробку с капсулами и снова прятать ее в шкаф – капсулы всегда будут под рукой, украшая пространство и напоминая об удовольствии кофе-брейка.<br>
+
+                            <br>
+                            <h1>Аксессуары для фирменных кофемашин</h1>
+
+                            выполняют множество различных функций:<br>
+                            - Ускоряют и упрощают процесс приготовления кофе;<br>
+                            - Незаметно подчеркивают социальный статус и успешность владельца;<br>
+                            - Повышают качество угощения гостей, а также позволяет увлечь их процессом;<br>
+                            - Делают качество приготовленного кофейного напитка еще выше;<br>
+                            - Превращают процесс приготовления кофе в настоящий приятный ритуал;<br>
+                            <br>
+                            Официальный интернет-магазин NESCAFE® Dolce Gusto® предлагает сделать себе приятный подарок в виде кофейных аксессуаров, заказав все необходимые предметы онлайн. Каждый заказ предполагает возможность доставки как по Москве, так и по всей России. Заказ в магазине NESCAFE® Dolce Gusto® — это возможность получить все самое необходимое, не растрачивая драгоценное время на походы по магазинам, подбор аксессуаров и поиски любимых вкусов. Вы можете заказать через интернет как сами кофемашины и кофейные капсулы, так и все дополнения к ним.
+                        </p>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</body>

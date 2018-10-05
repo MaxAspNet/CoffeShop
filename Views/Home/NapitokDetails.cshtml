@@ -1,0 +1,55 @@
+﻿@model Aprel.Models.Napitok
+@{
+    ViewBag.Title = "Капсула для кофемашин NESCAFÉ® Dolce Gusto® " + @Model.Name;
+}
+
+<div>
+    <div>
+        <div class="BannerOutside">
+            <div class="banner1 custom zoom" id="thumbnail">
+                <ul id="lightslider">
+                    <li data-thumb="@Model.Image1" data-src="@Model.Image1"><img src="@Model.Image1" /></li>
+                    <li data-thumb="@Model.Image2" data-src="@Model.Image2"><img src="@Model.Image2" /></li>
+                    <li data-thumb="@Model.Image3" data-src="@Model.Image3"><img src="@Model.Image3" /></li>
+                </ul>
+            </div>
+            <script>
+                $(document).ready(function () {
+
+                    $('#lightslider').lightSlider({
+                        mode: 'fade',
+                        gallery: true,
+                        item: 1,
+                        loop: true,
+                        thumbItem: 5,
+                        //vertical: true,
+                        vThumbWidth: 60,
+                        autoWidth: true,
+
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="DetailsText">
+        <span class="itemName">
+            @Model.Name
+        </span>
+        <br>       
+        <br>Притягательный кофе, произведенный из 100%-ных зерен Арабики, средней крепости. Американо славится своим нежным фруктовым ароматом и тонкими цветочными нотками.
+        <br><br>Упаковка содержит 16 порций<br>
+        <hr>
+        <h2>
+            Цена : <span class="price">@Model.Price РУБ.</span>
+        </h2>
+        <br>
+        @using (Html.BeginForm("AddNapitkiToCart", "Cart"))
+    {
+        <div class="pull-right">
+            @Html.HiddenFor(x => x.Id)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <input type="submit" class="btn btn-success" value="Добавить в корзину" />
+        </div>
+}
+    </div>
+</div>
